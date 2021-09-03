@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="antropologia_intento_1" version="0.1.3">
+ <settings>
+  <title>Antropología_Intento_1</title>
+  <revision description="created" date="8/23/21" />
+  <author name="Isis Ibis Arreola Valdez" rol="Programadora" />
+  <language>es</language>
+  <language>en</language>
+  <description>
+   <p>Primeros juegos enfocados a la antropología.</p>
+  </description>
+  <descriptors area-codes="soc" level-codes="INF, PRI, SEC, BTX" />
+  <skin file="@blue.xml" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Primeros juegos enfocados a la antropología.</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="Vestidos Regionales" navButtons="fwd" />
+  <item name="Vestidos" />
+  <item name="Comidas Regionales" />
+  <item name="Comidas" />
+  <item name="Rompecabezas" />
+  <item name="Puzzle" />
+  <item name="Palabras clave" />
+  <item name="Ramas" />
+  <item name="Cruci Ramas" />
+  <item name="Definiciones" />
+  <item name="Etnología" />
+ </sequence>
+ <activities>
+  <activity class="@associations.SimpleAssociation" name="Comidas" code="">
+   <description>
+    <p>Une cada platillo con su nombre.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x6666FF" />
+     </style>
+     <p>Une cada platillo con su nombre.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x99FF99" />
+     </style>
+     <p>Felicidades, por favor continua adelante.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF9999">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF99" border="true" />
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="253.0" cellHeight="175.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell image="Comida10.jpg" />
+    <cell image="Comida2.jpg" />
+    <cell image="Comida3.jpg" />
+    <cell image="Comida4.jpg" />
+    <cell image="Comida5.jpg" />
+    <cell image="Comida6.jpg" />
+    <cell image="Comida7.jpg" />
+    <cell image="Comida8.jpg" />
+    <cell image="Comida9.jpg" />
+   </cells>
+   <cells rows="3" cols="3" cellWidth="208.0" cellHeight="164.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell>
+     <style>
+      <color background="0x99FFFF" />
+     </style>
+     <p>Mixiotes</p>
+    </cell>
+    <cell>
+     <style>
+      <color background="0x9999FF" />
+     </style>
+     <p>Tlacoyitos</p>
+    </cell>
+    <cell>
+     <style>
+      <color background="0x99FF99" />
+     </style>
+     <p>Escamoles</p>
+    </cell>
+    <cell avoidOverlapping="true">
+     <style>
+      <color background="0xFFFF99" />
+     </style>
+     <p>Pastes</p>
+    </cell>
+    <cell>
+     <style>
+      <color background="0xFF99FF" />
+     </style>
+     <p>Barbacoa</p>
+    </cell>
+    <cell>
+     <style>
+      <color background="0xFF9999" />
+     </style>
+     <p>Xoconostle</p>
+    </cell>
+    <cell>
+     <style>
+      <color background="0xFF9966" />
+     </style>
+     <p>Zacahuil</p>
+    </cell>
+    <cell>
+     <style>
+      <color background="0x99FFCC" />
+     </style>
+     <p>Ximbó</p>
+    </cell>
+    <cell>
+     <style>
+      <color background="0x9999FF" />
+     </style>
+     <p>Chinicuiles</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="Comidas Regionales" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color foreground="0x66FFFF" background="0xFF99FF" />
+     </style>
+     <p>Explora las comidas regionales y aprende sus nombres.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x99FFFF">
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0xFFFF99" border="true" />
+   </settings>
+   <cells rows="3" cols="3" cellWidth="201.0" cellHeight="181.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFF99" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="3" />
+    <cell id="0" image="Comida10.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Mixote.mp3" />
+    </cell>
+    <cell id="1" image="Comida2.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Tlacoyitos.mp3" />
+    </cell>
+    <cell id="2" image="Comida3.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Escamoles.mp3" />
+    </cell>
+    <cell id="3" image="Comida4.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Pastes.mp3" />
+    </cell>
+    <cell id="4" image="Comida5.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Barbacoa.mp3" />
+    </cell>
+    <cell id="5" image="Comida6.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Xoconostle.mp3" />
+    </cell>
+    <cell id="6" image="Comida7.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Zacahuil.mp3" />
+    </cell>
+    <cell id="7" image="Comida8.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Ximbo.mp3" />
+    </cell>
+    <cell id="8" image="Comida9.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Chinicuiles.mp3" />
+    </cell>
+   </cells>
+   <cells rows="1" cols="9" cellWidth="156.0" cellHeight="99.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="9" rows="1" />
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x99FF99" background="0xFF99FF" />
+     </style>
+     <p>Mixiotes</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFF99FF" background="0x99FF99" />
+     </style>
+     <p>Tlacoyitos</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF6666" background="0x9999FF" />
+     </style>
+     <p>Escamoles</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x9999FF" background="0xFF6666" />
+     </style>
+     <p>Pastes</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x66FFCC" background="0xFFFF99" />
+     </style>
+     <p>Barbacoa</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFFFF99" background="0x66FFCC" />
+     </style>
+     <p>Xononostle</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0xFF99FF" background="0x9999FF" />
+     </style>
+     <p>Zacahuil</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFFFF99" background="0xFF99FF" />
+     </style>
+     <p>Ximbó</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" />
+      <color foreground="0x9999FF" background="0xFFFF99" />
+     </style>
+     <p>Chinicuiles</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="Cruci Ramas" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x99FFFF" />
+     </style>
+     <p>Encuentra la palabra para la imagen mostrada</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFCCCC" />
+     </style>
+     <p>Correcto, sigue así.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x99FF99">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF99FF" border="true" />
+   </settings>
+   <textGrid rows="13" columns="13" cellWidth="32.0" cellHeight="32.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>**E**********</row>
+     <row>**T**F*E*****</row>
+     <row>LINGUISTICA**</row>
+     <row>**O**S*N**R**</row>
+     <row>**L**I*O**Q**</row>
+     <row>**O**C*H**U**</row>
+     <row>**G**A*I**E**</row>
+     <row>**I****S**O**</row>
+     <row>**A****T**L**</row>
+     <row>*******O**O**</row>
+     <row>*******R**G**</row>
+     <row>*******I**I**</row>
+     <row>***SOCIAL*A**</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="250.0" cellHeight="232.0" border="true" id="acrossClues">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell id="12" item="0" image="Antropología Social.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Social.mp3" />
+    </cell>
+    <cell id="12" item="1" />
+    <cell id="12" item="0" />
+    <cell id="11" item="2" />
+    <cell id="11" item="1" />
+    <cell id="11" item="0" />
+    <cell id="10" item="2" />
+    <cell id="10" item="1" />
+    <cell id="10" item="0" />
+    <cell id="9" item="2" />
+    <cell id="9" item="1" />
+    <cell id="9" item="0" />
+    <cell id="1" item="3" />
+    <cell id="1" item="1" />
+    <cell id="1" item="2" />
+    <cell id="1" item="0" />
+    <cell id="0" item="1" />
+    <cell id="0" item="0" />
+    <cell id="8" item="3" />
+    <cell id="8" item="2" />
+    <cell id="8" item="1" />
+    <cell id="8" item="0" />
+    <cell id="7" item="3" />
+    <cell id="7" item="2" />
+    <cell id="7" item="1" />
+    <cell id="7" item="0" />
+    <cell id="6" item="4" />
+    <cell id="6" item="1" />
+    <cell id="6" item="3" />
+    <cell id="6" item="2" />
+    <cell id="6" item="0" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="5" item="0" />
+    <cell id="5" item="2" />
+    <cell id="5" item="2" />
+    <cell id="4" item="4" />
+    <cell id="4" item="1" />
+    <cell id="4" item="3" />
+    <cell id="4" item="2" />
+    <cell id="4" item="0" />
+    <cell id="3" item="4" />
+    <cell id="3" item="1" />
+    <cell id="3" item="3" />
+    <cell id="3" item="2" />
+    <cell id="3" item="0" />
+    <cell id="1" item="5" />
+    <cell id="2" item="0" image="lingüística-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Linguistica.mp3" />
+    </cell>
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <cells rows="1" cols="3" cellWidth="250.0" cellHeight="232.0" border="true" id="downClues">
+    <style />
+    <cell id="9" item="1" />
+    <cell id="2" item="1" />
+    <cell id="6" item="2" />
+    <cell id="6" item="1" />
+    <cell id="4" item="2" />
+    <cell id="4" item="1" />
+    <cell id="3" item="2" />
+    <cell id="3" item="1" />
+    <cell id="1" item="1" />
+    <cell id="8" item="2" />
+    <cell id="8" item="1" />
+    <cell id="5" item="2" />
+    <cell id="5" item="1" />
+    <cell id="11" item="0" image="Etnología.jpg" />
+    <cell id="10" item="0" image="Arqueología.png">
+     <media type="PLAY_AUDIO" level="1" file="Arqueología.mp3" />
+    </cell>
+    <cell id="10" item="0" />
+    <cell id="9" item="0" />
+    <cell id="9" item="0" />
+    <cell id="8" item="0" />
+    <cell id="8" item="0" />
+    <cell id="7" item="0" image="Etnohistoria.png">
+     <media type="PLAY_AUDIO" level="1" file="Etnohistoria.mp3" />
+    </cell>
+    <cell id="7" item="0" />
+    <cell id="6" item="0" />
+    <cell id="6" item="0" />
+    <cell id="5" item="0" image="Antropología Física.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Fisica.mp3" />
+    </cell>
+    <cell id="5" item="0" />
+    <cell id="4" item="0" />
+    <cell id="4" item="0" />
+    <cell id="3" item="0" />
+    <cell id="3" item="0" />
+    <cell id="2" item="0" avoidOverlapping="true" image="Etnología.jpg" />
+    <cell id="1" item="0" />
+    <cell id="0" item="0" image="Etnología.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Etnología.mp3" />
+    </cell>
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="Definiciones" code="">
+   <description>
+    <p>Seleccionar la definición con su descripción</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x9999FF" />
+     </style>
+     <p>Selecciona la palabra con su definición.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="20" bold="true" />
+      <color background="0x99FF99" />
+     </style>
+     <p>Felicidades, continua adelante.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x99FF99">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFF9999" border="true">
+     <size width="780" height="580" />
+    </window>
+    <skin file="@orange.xml" />
+   </settings>
+   <document>
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0xFFFFFF" size="13" bold="false" italic="false" tabWidth="12" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Lingüística</answer>
+       <optionList>
+        <option>Lingüística</option>
+        <option>Etnología</option>
+        <option>Etnohistoria</option>
+        <option>Arqueología</option>
+        <option>Antropología Social</option>
+        <option>Antropología Física</option>
+       </optionList>
+       <text>Lingüística</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF" size="20">Estudia los signos del lenguaje humano articulado, del lenguaje verbal, que es el producido por el aparato fonador.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Etnología</answer>
+       <optionList>
+        <option>Lingüística</option>
+        <option>Etnología</option>
+        <option>Etnohistoria</option>
+        <option>Arqueología</option>
+        <option>Antropología Social</option>
+        <option>Antropología Física</option>
+       </optionList>
+       <text>Etnología</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF" size="20">Se enfoca en el conjunto de las creaciones de todo tipo de los grupos sociales humanos, en ellas se incluyen con igual jerarquía las expresiones espirituales de la actividad humana y las formas materiales.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Etnohistoria</answer>
+       <optionList>
+        <option>Lingüística</option>
+        <option>Etnología</option>
+        <option>Etnohistoria</option>
+        <option>Arqueología</option>
+        <option>Antropología Social</option>
+        <option>Antropología Física</option>
+       </optionList>
+       <text>Etnohistoria</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF" size="20">Se ocupa de “la explicación diacrónica y sincrónica de la cultura del hombre y de las sociedades, tratando de comprender mejor su estructura y su desarrollo histórico”.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Arqueología</answer>
+       <optionList>
+        <option>Lingüística</option>
+        <option>Etnología</option>
+        <option>Etnohistoria</option>
+        <option>Arqueología</option>
+        <option>Antropología Social</option>
+        <option>Antropología Física</option>
+       </optionList>
+       <text>Arqueología</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF" size="20">Es la disciplina que estudia las sociedades de otros tiempos a través de sus vestigios, sean restos humanos, monumentos, pinturas, pirámides, monolitos, objetos, maderas o cerámicas.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Antropología Social</answer>
+       <optionList>
+        <option>Lingüística</option>
+        <option>Etnología</option>
+        <option>Etnohistoria</option>
+        <option>Arqueología</option>
+        <option>Antropología Social</option>
+        <option>Antropología Física</option>
+       </optionList>
+       <text>Antropología Social</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF" size="20">Centra su interés general en entender la producción y reproducción de la gran diversidad de símbolos que se originan en las relaciones grupales o sociales que establecen los humanos.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <target>
+       <answer>Antropología Física</answer>
+       <optionList>
+        <option>Lingüística</option>
+        <option>Etnología</option>
+        <option>Etnohistoria</option>
+        <option>Arqueología</option>
+        <option>Antropología Social</option>
+        <option>Antropología Física</option>
+       </optionList>
+       <text>Antropología Física</text>
+      </target>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text family="Arial" background="0xFFFFFF" size="20">El estudio del origen, naturaleza y evolución de la variabilidad biológica de los grupos humanos en su doble dimensión histórica y espacial, teniendo en cuenta la interacción que los factores biológico-ambientales y de comportamiento (sociales, culturales y psicológicos) ejercen tanto en el común de los individuos de nuestra especie como sobre los diferentes grupos y poblaciones de homo sapiens.</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" />
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@panels.Identify" name="Etnología" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF99FF" />
+     </style>
+     <p>Selecciona las imágenes que NO tienen que ver con etnología.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x99FF99" />
+     </style>
+     <p>Eso fue excelente. Continua adelante.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true" />
+   </settings>
+   <cells rows="4" cols="3" cellWidth="142.0" cellHeight="103.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="4" />
+    <cell id="1" image="Etno1.jpg" />
+    <cell id="0" image="Etno10.jpg" />
+    <cell id="0" image="Etno11.jpg" />
+    <cell id="1" image="Etno2.png" />
+    <cell id="1" image="Etno3.jpg" />
+    <cell id="0" image="Etno4.jpg" />
+    <cell id="0" image="Etno5.jpg" />
+    <cell id="1" image="Etno6.jpg" />
+    <cell id="0" image="Etno7.jpg" />
+    <cell id="0" image="Etno8.jpg" />
+    <cell id="1" image="Etno9-resized.jpg" />
+    <cell id="1" image="Fondo Pirámides.jpg" />
+   </cells>
+   <scramble times="31" primary="true" />
+  </activity>
+  <activity class="@textGrid.WordSearch" name="Palabras clave" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFFFF99" />
+     </style>
+     <p>Encuentra las palabras escondidas: Etnohistoria, Lingüistica, Etnologia, Social, Fisica y Arqueologia</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x99FF99" />
+     </style>
+     <p>Excelente, sigue adelante.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xCC99FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99FF99" border="true" />
+    <eventSounds>
+     <sound id="finishedOk" file="Muy Bien.mp3" />
+    </eventSounds>
+   </settings>
+   <textGrid rows="12" columns="19" cellWidth="49.0" cellHeight="35.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>*****F****S*</row>
+     <row>**L**I****O*</row>
+     <row>**I**S****C*</row>
+     <row>ETNOHISTORIA</row>
+     <row>**G**C****A*</row>
+     <row>**Ü**A****L*</row>
+     <row>**I*********</row>
+     <row>**S*********</row>
+     <row>*ETNOLOGIA**</row>
+     <row>**I******R**</row>
+     <row>**C******Q**</row>
+     <row>**A******U**</row>
+     <row>*********E**</row>
+     <row>*********O**</row>
+     <row>*********L**</row>
+     <row>*********O**</row>
+     <row>*********G**</row>
+     <row>*********I**</row>
+     <row>*********A**</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">LINGÜISTICA</clue>
+    <clue id="1">ETNOLOGIA</clue>
+    <clue id="2">ETNOHISTORIA</clue>
+    <clue id="3">ARQUEOLOGIA</clue>
+    <clue id="4">SOCIAL</clue>
+    <clue id="5">FISICA</clue>
+   </clues>
+   <cells rows="2" cols="3" cellWidth="168.0" cellHeight="103.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color foreground="0x9999FF" background="0xFFFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Linguistica.mp3" />
+     <p>Linguistica</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color foreground="0x9999FF" background="0xFFFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Etnología.mp3" />
+     <p>Etnologia</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color foreground="0x9999FF" background="0xFFFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Etnohistoria.mp3" />
+     <p>Etnohistoria</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color foreground="0x9999FF" background="0xFFFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Arqueología.mp3" />
+     <p>Arqueologia</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color foreground="0x9999FF" background="0xFFFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Social.mp3" />
+     <p>Social</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color foreground="0x9999FF" background="0xFFFF99" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="Fisica.mp3" />
+     <p>Física</p>
+    </cell>
+   </cells>
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="Puzzle" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x99FF99" />
+     </style>
+     <p>Arma el rompecabezas</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x9999FF" />
+     </style>
+     <p>Bien hecho, avanza adelante.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFF9999">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99FFFF" border="true" />
+   </settings>
+   <cells rows="3" cols="3" border="true" image="Fondo Pirámides.jpg">
+    <style />
+    <shaper class="@ClassicJigSaw" cols="3" rows="3" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="Ramas" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Comic Sans MS" size="28" bold="true" />
+      <color foreground="0x66FF66" background="0x9999FF" />
+     </style>
+     <p>Ubica la imagen con su respectiva rama.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xFF9999">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0x99FF99" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="117.0" cellHeight="178.0" border="true" id="primary">
+    <style>
+     <font family="Arial" size="17" bold="true" />
+     <color background="0xFFFF66" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell image="Antropología Física.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Antropologia Fisica.mp3" />
+    </cell>
+    <cell image="Antropología Social.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Antropologia Social.mp3" />
+    </cell>
+    <cell image="Arqueología.png">
+     <media type="PLAY_AUDIO" level="1" file="Arqueología.mp3" />
+    </cell>
+    <cell image="Etnohistoria.png">
+     <media type="PLAY_AUDIO" level="1" file="Etnohistoria.mp3" />
+    </cell>
+    <cell image="Etnología.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Etnología.mp3" />
+    </cell>
+    <cell image="lingüística-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Linguistica.mp3" />
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="118.0" cellHeight="175.0" border="true" id="secondary">
+    <style>
+     <color background="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>Antropología Física</p>
+    </cell>
+    <cell>
+     <p>Antropología Social</p>
+    </cell>
+    <cell>
+     <p>Arqueología</p>
+    </cell>
+    <cell>
+     <p>Etnohistoria</p>
+    </cell>
+    <cell>
+     <p>Etnología</p>
+    </cell>
+    <cell>
+     <p>Lingüistica</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@puzzles.DoublePuzzle" name="Rompecabezas" code="">
+   <description>
+    <p>Integra los elementos donde corresponden.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x9999FF" />
+     </style>
+     <p>Coloca los elementos donde crees que correspondan.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0x99FF99" />
+     </style>
+     <p>Muy bien, continua adelante.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0xFF99FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF99" transparent="true" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="Arqueología-resized.jpg">
+    <style>
+     <color background="0xFF99FF" inactive="0xFF99FF" />
+    </style>
+    <shaper class="@Holes" cols="3" rows="2">
+     <shape comment="0">M:0.316366,0.095|L:0.332152,0.089167|L:0.354381,0.094583|L:0.368879,0.105|L:0.38241,0.107083|L:0.399807,0.1075|L:0.415593,0.106667|L:0.432023,0.114167|L:0.442977,0.12625|L:0.44942,0.141667|L:0.453608,0.164583|L:0.450387,0.19375|L:0.438789,0.207917|L:0.425902,0.218333|L:0.402706,0.23|L:0.366946,0.234167|L:0.337629,0.239167|L:0.324742,0.2225|L:0.321521,0.192917|L:0.320876,0.17|L:0.317655,0.15375|L:0.315077,0.13375|L:0.311534,0.116667|L:0.316366,0.095</shape>
+     <shape comment="1">M:0.487113,0.619583|L:0.491624,0.6|L:0.500322,0.587083|L:0.514497,0.587083|L:0.536727,0.592917|L:0.547358,0.611667|L:0.571521,0.604167|L:0.576353,0.59125|L:0.590206,0.587083|L:0.600515,0.591667|L:0.619201,0.595417|L:0.626611,0.605833|L:0.627899,0.637083|L:0.614369,0.655417|L:0.598905,0.665|L:0.586662,0.658333|L:0.574098,0.67375|L:0.584407,0.68875|L:0.588273,0.707917|L:0.578286,0.739583|L:0.55799,0.742917|L:0.539304,0.736667|L:0.531572,0.720417|L:0.531894,0.693333|L:0.537049,0.68125|L:0.532539,0.665417|L:0.518686,0.669167|L:0.506121,0.665417|L:0.497423,0.65375|L:0.490335,0.6375|L:0.487113,0.619583</shape>
+     <shape comment="2">M:0.313789,0.784583|L:0.304768,0.795|L:0.302513,0.81|L:0.308956,0.813333|L:0.315077,0.81125|L:0.320554,0.81625|L:0.32732,0.822917|L:0.335052,0.825|L:0.318943,0.8475|L:0.295103,0.85125|L:0.290593,0.845|L:0.290593,0.831667|L:0.282216,0.83|L:0.271263,0.879583|L:0.286082,0.920417|L:0.274807,0.915833|L:0.258698,0.927083|L:0.259665,0.940833|L:0.283505,0.95125|L:0.309278,0.93625|L:0.290271,0.88875|L:0.311534,0.886667|L:0.324098,0.93375|L:0.315399,0.94375|L:0.335374,0.945833|L:0.338918,0.935417|L:0.37049,0.931667|L:0.372745,0.943333|L:0.38241,0.942917|L:0.391753,0.915|L:0.360503,0.911667|L:0.37951,0.897083|L:0.380155,0.881667|L:0.374356,0.87|L:0.352771,0.815417|L:0.357925,0.804583|L:0.364369,0.791667|L:0.363724,0.775417|L:0.358892,0.762917|L:0.348582,0.765417|L:0.338918,0.76125|L:0.322809,0.76125|L:0.314111,0.784167|L:0.313789,0.784583</shape>
+     <shape comment="3">M:0.83924,0.325833|L:0.83924,0.320833|L:0.860825,0.318333|L:0.861469,0.3275|L:0.876933,0.32875|L:0.892719,0.337083|L:0.891753,0.35125|L:0.886276,0.360417|L:0.871134,0.352917|L:0.859536,0.350833|L:0.856959,0.500417|L:0.841173,0.50125|L:0.837307,0.35|L:0.821198,0.34875|L:0.792848,0.35625|L:0.787049,0.348333|L:0.811211,0.331667|L:0.839562,0.32625|L:0.83924,0.325833</shape>
+     <shape comment="4">M:0.857818,0.696111|L:0.850086,0.710556|L:0.853093,0.722222|L:0.860825,0.721667|L:0.871993,0.740556|L:0.862543,0.748333|L:0.859107,0.761111|L:0.851804,0.757778|L:0.84622,0.763333|L:0.835052,0.746111|L:0.82646,0.750556|L:0.840636,0.773889|L:0.835911,0.785556|L:0.847079,0.797222|L:0.854811,0.807778|L:0.871134,0.808889|L:0.873282,0.821667|L:0.856529,0.924444|L:0.844502,0.923333|L:0.843643,0.935556|L:0.863402,0.937778|L:0.886168,0.85|L:0.897766,0.923333|L:0.888316,0.925|L:0.893471,0.937222|L:0.908505,0.937778|L:0.905069,0.843333|L:0.907646,0.817778|L:0.920962,0.751111|L:0.900344,0.729444|L:0.896907,0.704444|L:0.90378,0.691667|L:0.893471,0.687778|L:0.881014,0.678889|L:0.868557,0.680556|L:0.858247,0.696667|L:0.857818,0.696111</shape>
+    </shaper>
+   </cells>
+   <scramble times="31" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="Vestidos" code="">
+   <description>
+    <p>Escoger el vestido correspondiente al estado de Hidalgo.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Kristen ITC" size="18" bold="true" />
+      <color background="0xFF33FF" />
+     </style>
+     <p>La muñequita necesita tu ayuda. Busca sus vestidos que sean típicos del estado de Hidalgo.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0x99FF99" />
+     </style>
+     <p>Felicidades. Ella esta muy feliz. Por favor continua adelante.</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>Al parecer esos no eran los vestidos correctos. Intentalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <helpWindow showSolution="false">
+     <p>Hay dos tipos de vestidos, los que pertenecen al estado de Hidalgo y lo que no. Si un vestido no desaparece al unirlo con una opción prueba con la otra.</p>
+    </helpWindow>
+    <container bgColor="0x6666FF">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF66" border="true" />
+    <skin file="@orange.xml" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="155.0" cellHeight="195.0" border="true" id="primary">
+    <style>
+     <color background="0x9999FF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="1" image="Ves1.png" />
+    <cell id="1" image="Ves2.png" />
+    <cell id="1" image="Ves3.png" />
+    <cell id="0" image="Ves4.png" />
+    <cell id="0" image="Ves5-resized.jpg" />
+    <cell id="0" image="Ves6.png" />
+    <cell id="1" image="Ves7.png" />
+    <cell id="1" image="Ves8.png" />
+   </cells>
+   <cells rows="2" cols="1" cellWidth="107.0" cellHeight="236.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="2" />
+    <cell txtAlign="middle,bottom" image="Muñeca.png">
+     <style>
+      <font family="Arial Black" size="17" bold="true" />
+      <color background="0xFF9999" />
+     </style>
+     <p>HIDALGO</p>
+    </cell>
+    <cell>
+     <style>
+      <font family="Arial Black" size="17" bold="true" />
+      <color background="0xFFFF99" />
+     </style>
+     <p>Otros</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.Explore" name="Vestidos Regionales" code="">
+   <description>
+    <p>El ususario identifique algunos vestidos regionales y pueda decir de que región son.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFFFF99" background="0x9999FF" />
+     </style>
+     <p>Explora los vestidos presentados para conocer su lugar de origen. Cuando hayas acabado dale a la flecha para avanzar.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0xC0C0C0">
+     <image name="NiñosPreescolar3.jpg" tiled="true" />
+     <counters time="false" actions="false" score="false" />
+    </container>
+    <window bgColor="0x66FFFF" border="true" />
+   </settings>
+   <cells rows="2" cols="4" cellWidth="209.0" cellHeight="391.0" border="false" id="primary">
+    <style>
+     <color background="0x99FFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="4" rows="2" />
+    <cell id="0" border="true" image="Muñ1-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Yucatán.mp3" />
+    </cell>
+    <cell id="1" image="Muñ2-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Hidalgo.mp3" />
+    </cell>
+    <cell id="2" image="Muñ3-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Rusia.mp3" />
+    </cell>
+    <cell id="3" image="Muñ4-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Hidalgo.mp3" />
+    </cell>
+    <cell id="4" image="Muñ5-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Hidalgo.mp3" />
+    </cell>
+    <cell id="5" image="Muñ6-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Hidalgo.mp3" />
+    </cell>
+    <cell id="6" image="Muñ7-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Centro de México.mp3" />
+    </cell>
+    <cell id="7" image="Muñ8-resized.jpg">
+     <media type="PLAY_AUDIO" level="1" file="Oaxaca.mp3" />
+    </cell>
+   </cells>
+   <cells rows="1" cols="8" cellWidth="182.0" cellHeight="70.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="8" rows="1" />
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFFFF99" background="0x9999FF" />
+     </style>
+     <p>Yucatán</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x99FF99" background="0xFF99FF" />
+     </style>
+     <p>Hidalgo</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x99FFCC" background="0xFF9999" />
+     </style>
+     <p>Rusia</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFF99FF" background="0x99FFFF" />
+     </style>
+     <p>Hidalgo</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x9999FF" background="0xFFFF99" />
+     </style>
+     <p>Hidalgo</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0xFF99FF" background="0x99FF99" />
+     </style>
+     <p>Hidalgo</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x99FFFF" background="0xFF9999" />
+     </style>
+     <p>Centro de México</p>
+    </cell>
+    <cell>
+     <style borderStroke="0.7" markerStroke="5.0">
+      <font family="Comic Sans MS" size="36" bold="true" />
+      <color foreground="0x99FF99" background="0xFF99FF" />
+     </style>
+     <p>Oaxaca</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AUB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="Antropología Física.jpg" file="antropologia_fisica.jpg" />
+  <media name="Antropología Social.jpg" file="antropologia_social.jpg" />
+  <media name="Arqueología-resized.jpg" file="arqueologia-resized.jpg" />
+  <media name="Comida10.jpg" file="comida10.jpg" />
+  <media name="Comida2.jpg" file="comida2.jpg" />
+  <media name="Comida3.jpg" file="comida3.jpg" />
+  <media name="Comida4.jpg" file="comida4.jpg" />
+  <media name="Comida5.jpg" file="comida5.jpg" />
+  <media name="Comida6.jpg" file="comida6.jpg" />
+  <media name="Comida7.jpg" file="comida7.jpg" />
+  <media name="Comida8.jpg" file="comida8.jpg" />
+  <media name="Comida9.jpg" file="comida9.jpg" />
+  <media name="Etno1.jpg" file="etno1.jpg" />
+  <media name="Etno10.jpg" file="etno10.jpg" />
+  <media name="Etno11.jpg" file="etno11.jpg" />
+  <media name="Etno3.jpg" file="etno3.jpg" />
+  <media name="Etno4.jpg" file="etno4.jpg" />
+  <media name="Etno5.jpg" file="etno5.jpg" />
+  <media name="Etno6.jpg" file="etno6.jpg" />
+  <media name="Etno7.jpg" file="etno7.jpg" />
+  <media name="Etno8.jpg" file="etno8.jpg" />
+  <media name="Etno9-resized.jpg" file="etno9-resized.jpg" />
+  <media name="Etnología.jpg" file="etnologia.jpg" />
+  <media name="Fondo Pirámides.jpg" file="fondo_piramides.jpg" />
+  <media name="lingüística-resized.jpg" file="linguistica-resized.jpg" />
+  <media name="Muñ1-resized.jpg" file="mun1-resized.jpg" />
+  <media name="Muñ2-resized.jpg" file="mun2-resized.jpg" />
+  <media name="Muñ3-resized.jpg" file="mun3-resized.jpg" />
+  <media name="Muñ4-resized.jpg" file="mun4-resized.jpg" />
+  <media name="Muñ5-resized.jpg" file="mun5-resized.jpg" />
+  <media name="Muñ6-resized.jpg" file="mun6-resized.jpg" />
+  <media name="Muñ7-resized.jpg" file="mun7-resized.jpg" />
+  <media name="Muñ8-resized.jpg" file="mun8-resized.jpg" />
+  <media name="Niños preescolar-resized.jpg" file="ninos_preescolar-resized.jpg" />
+  <media name="NiñosPreescolar2.jpg" file="ninospreescolar2.jpg" />
+  <media name="NiñosPreescolar3.jpg" file="ninospreescolar3.jpg" />
+  <media name="Ves5-resized.jpg" file="ves5-resized.jpg" />
+  <media name="Antropologia Fisica.mp3" file="antropologia_fisica.mp3" />
+  <media name="Antropologia Social.mp3" file="antropologia_social.mp3" />
+  <media name="Arqueología.mp3" file="arqueologia.mp3" />
+  <media name="Barbacoa.mp3" file="barbacoa.mp3" />
+  <media name="bbc_cats-and-k_07045197.mp3" file="bbc_cats-and-k_07045197.mp3" />
+  <media name="Centro de México.mp3" file="centro_de_mexico.mp3" />
+  <media name="Chinicuiles.mp3" file="chinicuiles.mp3" />
+  <media name="Escamoles.mp3" file="escamoles.mp3" />
+  <media name="Etnohistoria.mp3" file="etnohistoria.mp3" />
+  <media name="Etnología.mp3" file="etnologia.mp3" />
+  <media name="Fisica.mp3" file="fisica.mp3" />
+  <media name="Hidalgo.mp3" file="hidalgo.mp3" />
+  <media name="Linguistica.mp3" file="linguistica.mp3" />
+  <media name="Mixote.mp3" file="mixote.mp3" />
+  <media name="Muy Bien.mp3" file="muy_bien.mp3" />
+  <media name="Oaxaca.mp3" file="oaxaca.mp3" />
+  <media name="Pastes.mp3" file="pastes.mp3" />
+  <media name="Rusia.mp3" file="rusia.mp3" />
+  <media name="Social.mp3" file="social.mp3" />
+  <media name="Tlacoyitos.mp3" file="tlacoyitos.mp3" />
+  <media name="Ximbo.mp3" file="ximbo.mp3" />
+  <media name="Xoconostle.mp3" file="xoconostle.mp3" />
+  <media name="Yucatán.mp3" file="yucatan.mp3" />
+  <media name="Zacahuil.mp3" file="zacahuil.mp3" />
+  <media name="Arqueología.png" file="arqueologia.png" />
+  <media name="Etno2.png" file="etno2.png" />
+  <media name="Etnohistoria.png" file="etnohistoria.png" />
+  <media name="Muñeca.png" file="muneca.png" />
+  <media name="Ves1.png" file="ves1.png" />
+  <media name="Ves2.png" file="ves2.png" />
+  <media name="Ves3.png" file="ves3.png" />
+  <media name="Ves4.png" file="ves4.png" />
+  <media name="Ves6.png" file="ves6.png" />
+  <media name="Ves7.png" file="ves7.png" />
+  <media name="Ves8.png" file="ves8.png" />
+ </mediaBag>
+</JClicProject>
+
